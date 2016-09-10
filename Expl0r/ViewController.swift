@@ -19,7 +19,20 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBOutlet var textField: UITextField!
+    
+    
 
+    @IBAction func AddButton(sender: UIButton) {
+        
+        let newItem = textField.text
+        textField.keyboardType = UIKeyboardType.Default
+        textField.resignFirstResponder()
+        
+        print(newItem)
+
+    }
 
 }
 
